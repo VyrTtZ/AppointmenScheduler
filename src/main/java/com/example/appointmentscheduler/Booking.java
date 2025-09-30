@@ -45,4 +45,14 @@ public class Booking {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "dayofWeek=" + dayofWeek +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

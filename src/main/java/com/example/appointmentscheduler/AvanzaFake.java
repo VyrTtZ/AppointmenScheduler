@@ -27,9 +27,36 @@ public class AvanzaFake extends Application {
             if (startScene.isLoggedIn()) {
                 stage.setScene(bookingScene.getScene());
             }
+            if(bookingScene.isProfile()){
+                stage.setScene(profileScene.getScene());
+            }
             System.out.println(startScene.isLoggedIn());
         }));
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
+    }
+
+    public StartScene getStartScene() {
+        return startScene;
+    }
+
+    public void setStartScene(StartScene startScene) {
+        this.startScene = startScene;
+    }
+
+    public BookingScene getBookingScene() {
+        return bookingScene;
+    }
+
+    public void setBookingScene(BookingScene bookingScene) {
+        this.bookingScene = bookingScene;
+    }
+
+    public ProfileScene getProfileScene() {
+        return profileScene;
+    }
+
+    public void setProfileScene(ProfileScene profileScene) {
+        this.profileScene = profileScene;
     }
 }
